@@ -86,6 +86,12 @@
      <input type="radio" id="jquery-radio-withui" name="jquery" onclick="showSpan('#jquery-div', jqueryContent);showSpan('#jqueryui-div', jqueryuiContent);"><label for="jquery-radio-withui">+ UI</label>
     </span>
     <br><br>
+    Include <a href="https://angularjs.org" target="angular">AngularJS?</a><br>
+    <span id="angular-radio-group">
+     <input type="radio" checked="checked" id="angular-radio-no" name="angular" onclick="hideSpan('#angular-div');"><label for="angular-radio-no">No</label>
+     <input type="radio" id="angular-radio-yes" name="angular" onclick="showSpan('#angular-div', angularContent);"><label for="angular-radio-yes">Yes</label>
+    </span>
+    <br><br>
     Include <a href="http://www.dojotoolkit.org" target="dojo">Dojo Toolkit?</a><br>
     <span id="dojo-radio-group">
      <input type="radio" checked="checked" id="dojo-radio-no" name="dojo" onclick="hideSpan('#dojo-div');"><label for="dojo-radio-no">No</label>
@@ -144,8 +150,9 @@
       &nbsp;&lt;body&gt;<br>
       &nbsp;&nbsp;<br>
      </span>
-     <span id="jquery-div" style="display:none;"></span>
-     <span id="jqueryui-div" style="display:none;"></span>
+	   <span id="jquery-div" style="display:none;"></span>
+	   <span id="jqueryui-div" style="display:none;"></span>
+     <span id="angular-div" style="display:none;"></span>
      <span id="dojo-div" style="display:none;"></span>
      <span id="mootools-div" style="display:none;"></span>
      <span id="prototype-div" style="display:none;"></span>
