@@ -41,6 +41,12 @@
      <input type="radio" id="xua-radio-yes" name="xua" onclick="showSpan('#xua-div', xuaContent);"><label for="xua-radio-yes">Yes</label>
     </span>
     <br><br>
+    Include Viewport Meta Tag?<br>
+    <span id="vp-radio-group">
+     <input type="radio" checked="checked" id="vp-radio-no" name="vp" onclick="hideSpan('#viewport-div');"><label for="vp-radio-no">No</label>
+     <input type="radio" id="vp-radio-yes" name="vp" onclick="showSpan('#viewport-div', viewportContent);"><label for="vp-radio-yes">Yes</label>
+    </span>
+    <br><br>
     Include Common Meta Tags?<br>
     <span id="commonmetas-radio-group">
      <input type="radio" checked="checked" id="commonmetas-radio-no" name="commonmetas" onclick="hideSpan('#commonmetas-div');"><label for="commonmetas-radio-no">No</label>
@@ -121,16 +127,17 @@
     <code id="markup" onclick="selectCode()">
      <span>
       &lt;!DOCTYPE html&gt;<br>
-	 </span>
-	 <span id="htmlMT-div" style="display:block;">&lt;html&gt;<br></span>
-	 <span id="htmlIE-div" style="display:none;"></span>
-	 <span>
-      &nbsp;&lt;head&gt;<br>
-	  &nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
-	 </span>
-     <span id="xua-div" style="display:none;"></span>
+     </span>
+     <span id="htmlMT-div" style="display:block;">&lt;html&gt;<br></span>
+     <span id="htmlIE-div" style="display:none;"></span>
      <span>
-	  &nbsp;&nbsp;&lt;title&gt;<span class="edit" onclick="editText('Enter page title',this);">title</span>&lt;/title&gt;<br>
+      &nbsp;&lt;head&gt;<br>
+      &nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+     </span>
+     <span id="xua-div" style="display:none;"></span>
+     <span id="viewport-div" style="display:none;"></span>
+     <span>
+      &nbsp;&nbsp;&lt;title&gt;<span class="edit" onclick="editText('Enter page title',this);">title</span>&lt;/title&gt;<br>
      </span>
      <span id="commonmetas-div" style="display:none;"></span>
      <span id="favicon-div" style="display:none;"></span>
@@ -157,8 +164,8 @@
       &lt;/html&gt;<br>
      </span>
     </code>
-	<span id="selectHintText">Click in above box to auto-select all markup.</span>
-	<span id="editHintText">Click on orange text to edit values on page.<br></span>
+    <span id="selectHintText">Click in above box to auto-select all markup.</span>
+    <span id="editHintText">Click on orange text to edit values on page.<br></span>
    </div>
    <div id="bottomSpacer"><br></div>
   </div>

@@ -2,6 +2,7 @@ var selectCodeOn = true,
  htmlMTContent = "&lt;html&gt;<br>",
  htmlIEContent = "&lt;!--[if lte IE 6]&gt;&lt;html class=\"preIE7 preIE8 preIE9\"&gt;&lt;![endif]--&gt;<br>&lt;!--[if IE 7]&gt;&lt;html class=\"preIE8 preIE9\"&gt;&lt;![endif]--&gt;<br>&lt;!--[if IE 8]&gt;&lt;html class=\"preIE9\"&gt;&lt;![endif]--&gt;<br>&lt;!--[if gte IE 9]&gt;&lt;!--&gt;&lt;html&gt;&lt;!--&lt;![endif]--&gt;<br>",
  xuaContent = "&nbsp;&nbsp;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;<br>",
+ viewportContent = "&nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;<br>",
  commonMetasContent = "&nbsp;&nbsp;&lt;meta name=&quot;author&quot; content=&quot;<span class=\"edit\" onclick=\"editText('Enter author name',this);\">name</span>&quot;&gt;<br>&nbsp;&nbsp;&lt;meta name=&quot;description&quot; content=&quot;<span class=\"edit\" onclick=\"editText('Enter page description',this);\">description here</span>&quot;&gt;<br>&nbsp;&nbsp;&lt;meta name=&quot;keywords&quot; content=&quot;<span class=\"edit\" onclick=\"editText('Enter page keywords',this);\">keywords,here</span>&quot;&gt;<br>",
  faviconContent = "&nbsp;&nbsp;&lt;link rel=&quot;shortcut icon&quot; href=&quot;<span class=\"edit\" onclick=\"editText('Enter favicon URL',this);\">favicon.ico</span>&quot; type=&quot;image/vnd.microsoft.icon&quot;&gt;<br>",
  googleWebFontContent = "&nbsp;&nbsp;&lt;link rel='stylesheet' href='//fonts.googleapis.com/css?family=<span class=\"edit\" onclick=\"editText('Enter font names',this);\">font1|font2|etc</span>' type='text/css'&gt;<br>",
@@ -22,6 +23,7 @@ $(function()
 {
  $("#html-radio-group").buttonset();
  $("#xua-radio-group").buttonset();
+ $("#vp-radio-group").buttonset();
  $("#commonmetas-radio-group").buttonset();
  $("#favicon-radio-group").buttonset();
  $("#googlewebfonts-radio-group").buttonset();
