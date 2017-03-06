@@ -1,0 +1,30 @@
+CACHE MANIFEST
+# This is a comment.
+# Cache manifest version 0.0.1
+# If you change the version number in this comment,
+# the cache manifest is no longer byte-for-byte
+# identical.
+# https://developer.apple.com/library/content/documentation/iPhone/Conceptual/SafariJSDatabaseGuide/OfflineApplicationCache/OfflineApplicationCache.html
+# http://caniuse.com/#feat=serviceworkers
+# https://help.github.com/enterprise/2.9/user/articles/mime-types-on-github-pages/
+# http://stackoverflow.com/questions/15951012/can-mime-types-of-github-pages-files-be-configured
+# IS APPLICATION CACHE MANIFEST SERVED WITH CORRECT MIME TYPE?
+ 
+demoimages/clownfish.jpg
+demoimages/clownfishsmall.jpg
+demoimages/flowingrock.jpg
+demoimages/flowingrocksmall.jpg
+demoimages/stones.jpg
+ 
+NETWORK:
+# All URLs that start with the following lines
+# are whitelisted.
+http://example.com/examplepath/
+http://www.example.org/otherexamplepath/
+ 
+CACHE:
+# Additional items to cache.
+demoimages/stonessmall.jpg
+ 
+FALLBACK:
+demoimages/currentImg.jpg images/stockImage.jpg
