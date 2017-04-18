@@ -18,6 +18,8 @@ footer{position:fixed;bottom:0px;width:100%;text-align:center;color:#CCCCCC;back
 a{text-decoration:none;color:#E44D26;}
 ::selection{background-color:#389220;}
 ::-moz-selection{background-color:#389220;}
+.cf:before, .cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
 
 /*jQuery UI styles*/
 .ui-helper-hidden-accessible{position:absolute !important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);}
