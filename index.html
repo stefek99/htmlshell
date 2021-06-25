@@ -1,207 +1,264 @@
 <!DOCTYPE html>
 <html>
- <head>
+
+<head>
   <meta charset="UTF-8">
   <meta name="author" content="Steve Niles">
   <meta name="description" content="A quick custom boilerplate HTML5 markup generator">
   <meta name="keywords" content="html,html5,markup,shell,skeleton,boilerplate,generator">
   <title>html shell</title>
   <link href="hs.ico" rel="icon" type="image/x-icon">
-  <link href="hs-edit.css" rel="stylesheet" type="text/css"/>
+  <link href="hs-edit.css" rel="stylesheet" type="text/css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
   <script src="hs-edit.js" type="text/javascript"></script>
- </head>
- <body>
+</head>
+
+<body>
   <header>
-
-
-   <p class="intro">Hi, it's <a href="https://MichalStefanow.com">Michal</a>,<br>
-     &quot;pseudo-maintainer&quot; of this project.<br>
-     The vision is to allow developers start with <br>
-     <strong>decent defaults</strong> with a <strong>single copy-paste</strong>.<br>
-     &nbsp;&nbsp;<i>(as seen on TV, no install required)</i><br>
-     Too busy with life, universe and everything...<br>
-     <br>
-     PS. I specialise in Angular and sometimes<br>
-     I use <a href="https://github.com/stefek99/htmlshell/issues/6">these boilerplates</a> for quick demos...
+    <p class="intro">Hi, it's <a href="https://MichalStefanow.com">Michal</a>,<br>
+      &quot;pseudo-maintainer&quot; of this project.<br>
+      The vision is to allow developers start with <br>
+      <strong>decent defaults</strong> with a <strong>single copy-paste</strong>.<br>
+      &nbsp;&nbsp;<i>(as seen on TV, no install required)</i><br>
+      Too busy with life, universe and everything...<br>
+      <br>
+      PS. I specialise in Angular and sometimes<br>
+      I use <a href="https://github.com/stefek99/htmlshell/issues/6">these boilerplates</a> for quick demos...
     </p>
 
+    <img src="./images/htmlshell.png" width="160" alt="html shell" style="margin: 0 20px;">
 
-
-   <img src="./images/htmlshell.png" width="160" alt="html shell" style="margin: 0 20px;">
-
-
-   <p class="intro">
-     You should check out the <a href="https://astralship.org">astralship</a> project.<br>
-     We own a chapel in the North Wales <i>(beautiful nature)</i>,<br>
-     it's only 3h15m on the train from London.<br>
-     ••• We are on a mission to heal the planet •••<br>
-     <strong>regenerative ecosystems</strong> and <strong>systematic change</strong>.<br>
-     Creating space for <strong>flow state</strong> and <strong>peak performance</strong>.<br>
-     If you are on this page - you are probably a developer -<br>
-     Come and join us - here is <a href="https://astralship.org/">website</a>.<br>
-     <strong>Much love, many thanks for all the support!</strong>
-   </p>
-
-
-
+    <p class="intro">
+      You should check out the <a href="https://astralship.org">astralship</a> project.<br>
+      We own a chapel in the North Wales <i>(beautiful nature)</i>,<br>
+      it's only 3h15m on the train from London.<br>
+      ••• We are on a mission to heal the planet •••<br>
+      <strong>regenerative ecosystems</strong> and <strong>systematic change</strong>.<br>
+      Creating space for <strong>flow state</strong> and <strong>peak performance</strong>.<br>
+      If you are on this page - you are probably a developer -<br>
+      Come and join us - here is <a href="https://astralship.org/">website</a>.<br>
+      <strong>Much love, many thanks for all the support!</strong>
+    </p>
   </header>
-  <div class="cf"></div>
-  <div id="wrapper">
-   <section id="options">
-    Include IE Conditional HTML Tag?<br>
-    <span id="html-radio-group">
-     <input type="radio" checked="checked" id="html-radio-MT" name="htmltag" onclick="showSpan('#htmlMT-div', htmlMTContent);hideSpan('#htmlIE-div');"><label for="html-radio-MT">No</label>
-     <input type="radio" id="html-radio-IE" name="htmltag" onclick="hideSpan('#htmlMT-div');showSpan('#htmlIE-div', htmlIEContent);"><label for="html-radio-IE">Yes</label>
-    </span>
-    <br><br>
-    Include X-UA-Compatible Meta Tag?<br>
-    <span id="xua-radio-group">
-     <input type="radio" checked="checked" id="xua-radio-no" name="xua" onclick="hideSpan('#xua-div');"><label for="xua-radio-no">No</label>
-     <input type="radio" id="xua-radio-yes" name="xua" onclick="showSpan('#xua-div', xuaContent);"><label for="xua-radio-yes">Yes</label>
-    </span>
-    <br><br>
-    Include Viewport Meta Tag?<br>
-    <span id="vp-radio-group">
-     <input type="radio" checked="checked" id="vp-radio-no" name="vp" onclick="hideSpan('#viewport-div');"><label for="vp-radio-no">No</label>
-     <input type="radio" id="vp-radio-yes" name="vp" onclick="showSpan('#viewport-div', viewportContent);"><label for="vp-radio-yes">Yes</label>
-    </span>
-    <br><br>
-    Include Common Meta Tags?<br>
-    <span id="commonmetas-radio-group">
-     <input type="radio" checked="checked" id="commonmetas-radio-no" name="commonmetas" onclick="hideSpan('#commonmetas-div');"><label for="commonmetas-radio-no">No</label>
-     <input type="radio" id="commonmetas-radio-yes" name="commonmetas" onclick="showSpan('#commonmetas-div', commonMetasContent);"><label for="commonmetas-radio-yes">Yes</label>
-    </span>
-    <br><br>
-    Include Favorites Icon?<br>
-    <span id="favicon-radio-group">
-     <input type="radio" checked="checked" id="favicon-radio-no" name="favicon" onclick="hideSpan('#favicon-div');"><label for="favicon-radio-no">No</label>
-     <input type="radio" id="favicon-radio-yes" name="favicon" onclick="showSpan('#favicon-div', faviconContent);"><label for="favicon-radio-yes">Yes</label>
-    </span>
-    <br><br>
-    Include <a href="http://www.google.com/webfonts#HomePlace:home" target="webfonts">Google Web Fonts?</a><br>
-    <span id="googlewebfonts-radio-group">
-     <input type="radio" checked="checked" id="googlewebfonts-radio-no" name="googlewebfonts" onclick="hideSpan('#googlewebfonts-div');"><label for="googlewebfonts-radio-no">No</label>
-     <input type="radio" id="googlewebfonts-radio-yes" name="googlewebfonts" onclick="showSpan('#googlewebfonts-div', googleWebFontContent);"><label for="googlewebfonts-radio-yes">Yes</label>
-    </span>
-    <br><br>
-    Include CSS Stylesheet?<br>
-    <span id="stylesheet-radio-group">
-     <input type="radio" checked="checked" id="stylesheet-radio-none" name="stylesheet" value="none" onclick="hideSpan('#linkedcss-div');hideSpan('#embeddedcss-div');"><label for="stylesheet-radio-none">No</label>
-     <input type="radio" id="stylesheet-radio-linked" name="stylesheet" value="linked" onclick="showSpan('#linkedcss-div', linkedCSSContent);hideSpan('#embeddedcss-div');"><label for="stylesheet-radio-linked">Linked</label>
-     <input type="radio" id="stylesheet-radio-embedded" name="stylesheet" value="embedded" onclick="hideSpan('#linkedcss-div');showSpan('#embeddedcss-div', embeddedCSSContent);"><label for="stylesheet-radio-embedded">Embedded</label>
-     <input type="radio" id="stylesheet-radio-both" name="stylesheet" value="both" onclick="showSpan('#linkedcss-div', linkedCSSContent);showSpan('#embeddedcss-div', embeddedCSSContent);"><label for="stylesheet-radio-both">Both</label>
-    </span>
-    <br><br>
-    Include <a href="http://www.google.com/analytics/" target="analytics">Google Analytics?</a><br>
-    <span id="analytics-radio-group">
-     <input type="radio" checked="checked" id="analytics-radio-no" name="analytics" onclick="hideSpan('#analytics-div');"><label for="analytics-radio-no">No</label>
-     <input type="radio" id="analytics-radio-yes" name="analytics" onclick="showSpan('#analytics-div', analyticsContent);"><label for="analytics-radio-yes">Yes</label>
-    </span>
-    <br><br>
-    Include <a href="http://www.jquery.com" target="jquery">jQuery?</a><br>
-    <span id="jquery-radio-group">
-     <input type="radio" checked="checked" id="jquery-radio-no" name="jquery" onclick="hideSpan('#jquery-div');hideSpan('#jqueryui-div');"><label for="jquery-radio-no">No</label>
-     <input type="radio" id="jquery-radio-yes" name="jquery" onclick="showSpan('#jquery-div', jqueryContent);hideSpan('#jqueryui-div');"><label for="jquery-radio-yes">Yes</label>
-     <input type="radio" id="jquery-radio-withui" name="jquery" onclick="showSpan('#jquery-div', jqueryContent);showSpan('#jqueryui-div', jqueryuiContent);"><label for="jquery-radio-withui">+ UI</label>
-    </span>
-    <br><br>
-    Include <a href="https://angularjs.org" target="angular">AngularJS?</a><br>
-    <span id="angular-radio-group">
-     <input type="radio" checked="checked" id="angular-radio-no" name="angular" onclick="hideSpan('#angular-div');"><label for="angular-radio-no">No</label>
-     <input type="radio" id="angular-radio-yes" name="angular" onclick="showSpan('#angular-div', angularContent);"><label for="angular-radio-yes">Yes</label>
-    </span>
-    <br><br>
-    Include <a href="http://www.dojotoolkit.org" target="dojo">Dojo Toolkit?</a><br>
-    <span id="dojo-radio-group">
-     <input type="radio" checked="checked" id="dojo-radio-no" name="dojo" onclick="hideSpan('#dojo-div');"><label for="dojo-radio-no">No</label>
-     <input type="radio" id="dojo-radio-yes" name="dojo" onclick="showSpan('#dojo-div', dojoContent);"><label for="dojo-radio-yes">Yes</label>
-    </span>
-    <br><br>
-    Include <a href="http://www.mootools.net" target="mootools">MooTools?</a><br>
-    <span id="mootools-radio-group">
-     <input type="radio" checked="checked" id="mootools-radio-no" name="mootools" onclick="hideSpan('#mootools-div');"><label for="mootools-radio-no">No</label>
-     <input type="radio" id="mootools-radio-yes" name="mootools" onclick="showSpan('#mootools-div', mooToolsContent);"><label for="mootools-radio-yes">Yes</label>
-    </span>
-    <br><br>
-    Include <a href="http://www.prototypejs.org" target="prototype">Prototype?</a><br>
-    <span id="prototype-radio-group">
-     <input type="radio" checked="checked" id="prototype-radio-no" name="prototype" onclick="hideSpan('#prototype-div');"><label for="prototype-radio-no">No</label>
-     <input type="radio" id="prototype-radio-yes" name="prototype" onclick="showSpan('#prototype-div', prototypeContent);"><label for="prototype-radio-yes">Yes</label>
-    </span>
-    <br><br>
-    Include <a href="http://www.modernizr.com" target="modernizr">Modernizr?</a><br>
-    <span id="modernizr-radio-group">
-     <input type="radio" checked="checked" id="modernizr-radio-no" name="modernizr" onclick="hideSpan('#modernizr-div');"><label for="modernizr-radio-no">No</label>
-     <input type="radio" id="modernizr-radio-yes" name="modernizr" onclick="showSpan('#modernizr-div', modernizrContent);"><label for="modernizr-radio-yes">Yes</label>
-    </span>
-    <br><br>
-    Include Autorun Javascript?<br>
-    <span id="javascript-radio-group">
-     <input type="radio" checked="checked" id="javascript-radio-none" name="javascript" value="none" onclick="hideSpan('#domready-div');hideSpan('#pageloaded-div');"><label for="javascript-radio-none">No</label>
-     <input type="radio" id="javascript-radio-domready" name="javascript" value="domready" onclick="showSpan('#domready-div', domReadyContent);hideSpan('#pageloaded-div');"><label for="javascript-radio-domready">On DOM Ready</label>
-     <input type="radio" id="javascript-radio-pageloaded" name="javascript" value="pageloaded" onclick="hideSpan('#domready-div');showSpan('#pageloaded-div', pageLoadedContent);"><label for="javascript-radio-pageloaded">On Page Loaded</label>
-    </span>
-   </section>
-   <div id="markupWrapper">
-    <code id="markup" onclick="selectCode()">
-     <span>
-      &lt;!DOCTYPE html&gt;<br>
-     </span>
-     <span id="htmlMT-div" style="display:block;">&lt;html&gt;<br></span>
-     <span id="htmlIE-div" style="display:none;"></span>
-     <span>
-      &nbsp;&nbsp;&lt;head&gt;<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
-     </span>
-     <span id="xua-div" style="display:none;"></span>
-     <span id="viewport-div" style="display:none;"></span>
-     <span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<span class="edit" onclick="editText('Enter page title',this);">title</span>&lt;/title&gt;<br>
-     </span>
-     <span id="commonmetas-div" style="display:none;"></span>
-     <span id="favicon-div" style="display:none;"></span>
-     <span id="googlewebfonts-div" style="display:none;"></span>
-     <span id="linkedcss-div" style="display:none;"></span>
-     <span id="embeddedcss-div" style="display:none;"></span>
-     <span id="analytics-div" style="display:none;"></span>
-     <span>
-      &nbsp;&nbsp;&lt;/head&gt;<br>
-      &nbsp;&nbsp;&lt;body&gt;<br>
-      &nbsp;&nbsp;<br>
-     </span>
-	   <span id="jquery-div" style="display:none;"></span>
-	   <span id="jqueryui-div" style="display:none;"></span>
-     <span id="angular-div" style="display:none;"></span>
-     <span id="dojo-div" style="display:none;"></span>
-     <span id="mootools-div" style="display:none;"></span>
-     <span id="prototype-div" style="display:none;"></span>
-     <span id="modernizr-div" style="display:none;"></span>
-     <span id="domready-div" style="display:none;"></span>
-     <span id="pageloaded-div" style="display:none;"></span>
-     <span>
-      &nbsp;&nbsp;&lt;/body&gt;<br>
-      &lt;/html&gt;<br>
-     </span>
-    </code>
-    <span id="selectHintText">Click in above box to auto-select all markup.</span>
-    <span id="editHintText">Click on orange text to edit values on page.<br></span>
-   </div>
-   <div id="bottomSpacer"><br></div>
-  </div>
-  <footer>
-   Contributions welcome! <a href="https://github.com/stefek99/htmlshell" target="github">GitHub</a>
-  </footer>
-  
-  
-         <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-74839421-1','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
-</script>
-  
- </body>
+  <div class="cf"></div>
+
+  <div id="wrapper">
+    <section id="options">
+      Include IE Conditional HTML Tag?<br>
+      <span id="html-radio-group">
+        <input type="radio" checked="checked" id="html-radio-MT" name="htmltag"
+          onclick="showSpan('#htmlMT-div', htmlMTContent);hideSpan('#htmlIE-div');"><label
+          for="html-radio-MT">No</label>
+        <input type="radio" id="html-radio-IE" name="htmltag"
+          onclick="hideSpan('#htmlMT-div');showSpan('#htmlIE-div', htmlIEContent);"><label
+          for="html-radio-IE">Yes</label>
+      </span>
+      <br><br>
+
+      Include X-UA-Compatible Meta Tag?<br>
+      <span id="xua-radio-group">
+        <input type="radio" checked="checked" id="xua-radio-no" name="xua" onclick="hideSpan('#xua-div');"><label
+          for="xua-radio-no">No</label>
+        <input type="radio" id="xua-radio-yes" name="xua" onclick="showSpan('#xua-div', xuaContent);"><label
+          for="xua-radio-yes">Yes</label>
+      </span>
+      <br><br>
+
+      Include Viewport Meta Tag?<br>
+      <span id="vp-radio-group">
+        <input type="radio" checked="checked" id="vp-radio-no" name="vp" onclick="hideSpan('#viewport-div');"><label
+          for="vp-radio-no">No</label>
+        <input type="radio" id="vp-radio-yes" name="vp" onclick="showSpan('#viewport-div', viewportContent);"><label
+          for="vp-radio-yes">Yes</label>
+      </span>
+      <br><br>
+
+      Include Common Meta Tags?<br>
+      <span id="commonmetas-radio-group">
+        <input type="radio" checked="checked" id="commonmetas-radio-no" name="commonmetas"
+          onclick="hideSpan('#commonmetas-div');"><label for="commonmetas-radio-no">No</label>
+        <input type="radio" id="commonmetas-radio-yes" name="commonmetas"
+          onclick="showSpan('#commonmetas-div', commonMetasContent);"><label for="commonmetas-radio-yes">Yes</label>
+      </span>
+      <br><br>
+
+      Include Favorites Icon?<br>
+      <span id="favicon-radio-group">
+        <input type="radio" checked="checked" id="favicon-radio-no" name="favicon"
+          onclick="hideSpan('#favicon-div');"><label for="favicon-radio-no">No</label>
+        <input type="radio" id="favicon-radio-yes" name="favicon"
+          onclick="showSpan('#favicon-div', faviconContent);"><label for="favicon-radio-yes">Yes</label>
+      </span>
+      <br><br>
+
+      Include <a href="http://www.google.com/webfonts#HomePlace:home" target="webfonts">Google Web Fonts?</a><br>
+      <span id="googlewebfonts-radio-group">
+        <input type="radio" checked="checked" id="googlewebfonts-radio-no" name="googlewebfonts"
+          onclick="hideSpan('#googlewebfonts-div');"><label for="googlewebfonts-radio-no">No</label>
+        <input type="radio" id="googlewebfonts-radio-yes" name="googlewebfonts"
+          onclick="showSpan('#googlewebfonts-div', googleWebFontContent);"><label
+          for="googlewebfonts-radio-yes">Yes</label>
+      </span>
+      <br><br>
+
+      Include CSS Stylesheet?<br>
+      <span id="stylesheet-radio-group">
+        <input type="radio" checked="checked" id="stylesheet-radio-none" name="stylesheet" value="none"
+          onclick="hideSpan('#linkedcss-div');hideSpan('#embeddedcss-div');"><label
+          for="stylesheet-radio-none">No</label>
+        <input type="radio" id="stylesheet-radio-linked" name="stylesheet" value="linked"
+          onclick="showSpan('#linkedcss-div', linkedCSSContent);hideSpan('#embeddedcss-div');"><label
+          for="stylesheet-radio-linked">Linked</label>
+        <input type="radio" id="stylesheet-radio-embedded" name="stylesheet" value="embedded"
+          onclick="hideSpan('#linkedcss-div');showSpan('#embeddedcss-div', embeddedCSSContent);"><label
+          for="stylesheet-radio-embedded">Embedded</label>
+        <input type="radio" id="stylesheet-radio-both" name="stylesheet" value="both"
+          onclick="showSpan('#linkedcss-div', linkedCSSContent);showSpan('#embeddedcss-div', embeddedCSSContent);"><label
+          for="stylesheet-radio-both">Both</label>
+      </span>
+      <br><br>
+
+      Include <a href="http://www.google.com/analytics/" target="analytics">Google Analytics?</a><br>
+      <span id="analytics-radio-group">
+        <input type="radio" checked="checked" id="analytics-radio-no" name="analytics"
+          onclick="hideSpan('#analytics-div');"><label for="analytics-radio-no">No</label>
+        <input type="radio" id="analytics-radio-yes" name="analytics"
+          onclick="showSpan('#analytics-div', analyticsContent);"><label for="analytics-radio-yes">Yes</label>
+      </span>
+      <br><br>
+
+      Include <a href="http://www.jquery.com" target="jquery">jQuery?</a><br>
+      <span id="jquery-radio-group">
+        <input type="radio" checked="checked" id="jquery-radio-no" name="jquery"
+          onclick="hideSpan('#jquery-div');hideSpan('#jqueryui-div');"><label for="jquery-radio-no">No</label>
+        <input type="radio" id="jquery-radio-yes" name="jquery"
+          onclick="showSpan('#jquery-div', jqueryContent);hideSpan('#jqueryui-div');"><label
+          for="jquery-radio-yes">Yes</label>
+        <input type="radio" id="jquery-radio-withui" name="jquery"
+          onclick="showSpan('#jquery-div', jqueryContent);showSpan('#jqueryui-div', jqueryuiContent);"><label
+          for="jquery-radio-withui">+ UI</label>
+      </span>
+      <br><br>
+
+      Include <a href="https://angularjs.org" target="angular">AngularJS?</a><br>
+      <span id="angular-radio-group">
+        <input type="radio" checked="checked" id="angular-radio-no" name="angular"
+          onclick="hideSpan('#angular-div');"><label for="angular-radio-no">No</label>
+        <input type="radio" id="angular-radio-yes" name="angular"
+          onclick="showSpan('#angular-div', angularContent);"><label for="angular-radio-yes">Yes</label>
+      </span>
+      <br><br>
+
+      Include <a href="http://www.dojotoolkit.org" target="dojo">Dojo Toolkit?</a><br>
+      <span id="dojo-radio-group">
+        <input type="radio" checked="checked" id="dojo-radio-no" name="dojo" onclick="hideSpan('#dojo-div');"><label
+          for="dojo-radio-no">No</label>
+        <input type="radio" id="dojo-radio-yes" name="dojo" onclick="showSpan('#dojo-div', dojoContent);"><label
+          for="dojo-radio-yes">Yes</label>
+      </span>
+      <br><br>
+
+      Include <a href="http://www.mootools.net" target="mootools">MooTools?</a><br>
+      <span id="mootools-radio-group">
+        <input type="radio" checked="checked" id="mootools-radio-no" name="mootools"
+          onclick="hideSpan('#mootools-div');"><label for="mootools-radio-no">No</label>
+        <input type="radio" id="mootools-radio-yes" name="mootools"
+          onclick="showSpan('#mootools-div', mooToolsContent);"><label for="mootools-radio-yes">Yes</label>
+      </span>
+      <br><br>
+
+      Include <a href="http://www.prototypejs.org" target="prototype">Prototype?</a><br>
+      <span id="prototype-radio-group">
+        <input type="radio" checked="checked" id="prototype-radio-no" name="prototype"
+          onclick="hideSpan('#prototype-div');"><label for="prototype-radio-no">No</label>
+        <input type="radio" id="prototype-radio-yes" name="prototype"
+          onclick="showSpan('#prototype-div', prototypeContent);"><label for="prototype-radio-yes">Yes</label>
+      </span>
+      <br><br>
+
+      Include <a href="http://www.modernizr.com" target="modernizr">Modernizr?</a><br>
+      <span id="modernizr-radio-group">
+        <input type="radio" checked="checked" id="modernizr-radio-no" name="modernizr"
+          onclick="hideSpan('#modernizr-div');"><label for="modernizr-radio-no">No</label>
+        <input type="radio" id="modernizr-radio-yes" name="modernizr"
+          onclick="showSpan('#modernizr-div', modernizrContent);"><label for="modernizr-radio-yes">Yes</label>
+      </span>
+      <br><br>
+
+      Include Autorun Javascript?<br>
+      <span id="javascript-radio-group">
+        <input type="radio" checked="checked" id="javascript-radio-none" name="javascript" value="none"
+          onclick="hideSpan('#domready-div');hideSpan('#pageloaded-div');"><label for="javascript-radio-none">No</label>
+        <input type="radio" id="javascript-radio-domready" name="javascript" value="domready"
+          onclick="showSpan('#domready-div', domReadyContent);hideSpan('#pageloaded-div');"><label
+          for="javascript-radio-domready">On DOM Ready</label>
+        <input type="radio" id="javascript-radio-pageloaded" name="javascript" value="pageloaded"
+          onclick="hideSpan('#domready-div');showSpan('#pageloaded-div', pageLoadedContent);"><label
+          for="javascript-radio-pageloaded">On Page Loaded</label>
+      </span>
+    </section>
+
+    <div id="markupWrapper">
+      <code id="markup" onclick="selectCode()">
+        <span>
+          &lt;!DOCTYPE html&gt;<br>
+        </span>
+        <span id="htmlMT-div" style="display:block;">&lt;html&gt;<br></span>
+        <span id="htmlIE-div" style="display:none;"></span>
+        <span>
+          &nbsp;&nbsp;&lt;head&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+        </span>
+        <span id="xua-div" style="display:none;"></span>
+        <span id="viewport-div" style="display:none;"></span>
+        <span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<span class="edit" onclick="editText('Enter page title',this);">title</span>&lt;/title&gt;<br>
+        </span>
+        <span id="commonmetas-div" style="display:none;"></span>
+        <span id="favicon-div" style="display:none;"></span>
+        <span id="googlewebfonts-div" style="display:none;"></span>
+        <span id="linkedcss-div" style="display:none;"></span>
+        <span id="embeddedcss-div" style="display:none;"></span>
+        <span id="analytics-div" style="display:none;"></span>
+        <span>
+          &nbsp;&nbsp;&lt;/head&gt;<br>
+          &nbsp;&nbsp;&lt;body&gt;<br>
+          &nbsp;&nbsp;<br>
+        </span>
+        <span id="jquery-div" style="display:none;"></span>
+        <span id="jqueryui-div" style="display:none;"></span>
+        <span id="angular-div" style="display:none;"></span>
+        <span id="dojo-div" style="display:none;"></span>
+        <span id="mootools-div" style="display:none;"></span>
+        <span id="prototype-div" style="display:none;"></span>
+        <span id="modernizr-div" style="display:none;"></span>
+        <span id="domready-div" style="display:none;"></span>
+        <span id="pageloaded-div" style="display:none;"></span>
+        <span>
+          &nbsp;&nbsp;&lt;/body&gt;<br>
+          &lt;/html&gt;<br>
+        </span>
+      </code>
+
+      <span id="selectHintText">Click in above box to auto-select all markup.</span>
+      <span id="editHintText">Click on orange text to edit values on page.<br></span>
+    </div>
+
+    <div id="bottomSpacer"><br></div>
+  </div>
+
+  <footer>
+    Contributions welcome! <a href="https://github.com/stefek99/htmlshell" target="github">GitHub</a>
+  </footer>
+
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-74839421-1', 'auto'); ga('send', 'pageview')
+  </script>
+
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
 </html>
