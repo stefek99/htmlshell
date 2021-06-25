@@ -23,6 +23,10 @@ header {
   min-width: 767px;
 }
 
+header #logo {
+  margin: 0 20px;
+}
+
 header #title {
   font-size: 36px;
   font-weight: bold;
