@@ -4,16 +4,11 @@ html {
 body {
   min-width: 767px;
   margin: 0px;
-  background-color: #cccccc;
-  background: -webkit-linear-gradient(
-    top,
-    #cccccc 0%,
-    #cccccc 50%,
-    #666666 100%
-  );
-  background: -moz-linear-gradient(top, #cccccc 0%, #cccccc 50%, #666666 100%);
-  background: -o-linear-gradient(top, #cccccc 0%, #cccccc 50%, #666666 100%);
-  background: linear-gradient(top, #cccccc 0%, #cccccc 50%, #666666 100%);
+  background-color: #ccc;
+  background: -webkit-linear-gradient(top, #ccc 0%, #ccc 50%, #666 100%);
+  background: -moz-linear-gradient(top, #ccc 0%, #ccc 50%, #666 100%);
+  background: -o-linear-gradient(top, #ccc 0%, #ccc 50%, #666 100%);
+  background: linear-gradient(top, #ccc 0%, #ccc 50%, #666 100%);
   background-attachment: fixed;
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 11px;
@@ -44,9 +39,9 @@ p.intro a {
   white-space: nowrap;
   border-style: solid;
   border-width: 1px;
-  border-color: #000000;
+  border-color: black;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: white;
 }
 #options label {
   margin-top: 2px;
@@ -61,9 +56,9 @@ p.intro a {
   font-family: monospace;
   border-style: solid;
   border-width: 1px;
-  border-color: #000000;
+  border-color: black;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: white;
 }
 #markup span {
   display: block;
@@ -96,8 +91,8 @@ footer {
   bottom: 0px;
   width: 100%;
   text-align: center;
-  color: #cccccc;
-  background-color: #333333;
+  color: #ccc;
+  background-color: #333;
   padding: 5px;
 }
 a {
@@ -135,7 +130,7 @@ a {
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
-  border: 1px solid #000000;
+  border: 1px solid black;
   background: #0a0a0a url(images/button-default.png) 50% 50% repeat-x;
   font-weight: bold;
   color: #00cc1a;
@@ -152,7 +147,7 @@ a {
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
-  border: 1px solid #000000;
+  border: 1px solid black;
   background: #0a0a0a url(images/button-hover.png) 50% 50% repeat-x;
   font-weight: bold;
   color: #00cc1a;
@@ -165,15 +160,15 @@ a {
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-  border: 1px solid #000000;
+  border: 1px solid black;
   background: #009e14 url(images/button-active.png) 50% 50% repeat-x;
   font-weight: bold;
-  color: #ffffff;
+  color: white;
 }
 .ui-state-active a,
 .ui-state-active a:link,
 .ui-state-active a:visited {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 .ui-widget:active {
