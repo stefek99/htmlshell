@@ -12,7 +12,7 @@ body {
   background: linear-gradient(top, #ccc 0%, #ccc 50%, #666 100%);
   background-attachment: fixed;
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 header {
@@ -43,6 +43,7 @@ p.intro a {
 }
 
 #options {
+  font-size: 12px;
   display: block;
   float: left;
   margin-right: 10px;
