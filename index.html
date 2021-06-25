@@ -3,14 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="author" content="Steve Niles">
+  <title>HTML shell</title>
+
   <meta name="description" content="A quick custom boilerplate HTML5 markup generator">
   <meta name="keywords" content="html,html5,markup,shell,skeleton,boilerplate,generator">
-  <title>html shell</title>
-  <link href="hs.ico" rel="icon" type="image/x-icon">
-  <link href="hs-edit.css" rel="stylesheet" type="text/css" />
+
+  <link href="hs.ico" rel="icon" type="image/x-icon"><!-- favicon -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
+
+  <link href="hs-edit.css" rel="stylesheet" type="text/css" />
   <script src="hs-edit.js" type="text/javascript"></script>
 </head>
 
@@ -25,7 +28,7 @@
       <br>
       PS. I specialise in Angular and sometimes<br>
       I use <a href="https://github.com/stefek99/htmlshell/issues/6">these boilerplates</a> for quick demos...
-    </p>
+    </p><!-- .intro -->
 
     <img src="./images/htmlshell.png" width="160" alt="html shell" style="margin: 0 20px;">
 
@@ -39,7 +42,7 @@
       If you are on this page - you are probably a developer -<br>
       Come and join us - here is <a href="https://astralship.org/">website</a>.<br>
       <strong>Much love, many thanks for all the support!</strong>
-    </p>
+    </p><!-- .intro -->
   </header>
 
   <div class="cf"></div>
@@ -198,7 +201,7 @@
           onclick="hideSpan('#domready-div');showSpan('#pageloaded-div', pageLoadedContent);"><label
           for="javascript-radio-pageloaded">On Page Loaded</label>
       </span>
-    </section>
+    </section><!-- #options -->
 
     <div id="markupWrapper">
       <code id="markup" onclick="selectCode()">
@@ -240,14 +243,14 @@
           &nbsp;&nbsp;&lt;/body&gt;<br>
           &lt;/html&gt;<br>
         </span>
-      </code>
+      </code><!-- #markup -->
 
       <span id="selectHintText">Click in above box to auto-select all markup.</span>
       <span id="editHintText">Click on orange text to edit values on page.<br></span>
-    </div>
+    </div><!-- #markupWrapper -->
 
     <div id="bottomSpacer"><br></div>
-  </div>
+  </div><!-- #wrapper -->
 
   <footer>
     Contributions welcome! <a href="https://github.com/stefek99/htmlshell" target="github">GitHub</a>
