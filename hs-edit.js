@@ -56,9 +56,18 @@ $(function () {
   if (window.getSelection) {
     $("#selectHintText").css("display", "inline");
   }
+
+  $("#options input[type=radio]").on("change", function (e) {
+    pubsub.pub("bi:control", e.currentTarget.parentNode.id);
+  });
+
+  $("#ctaContributions").on("click", function () {
+    pubsub.pub("bi:cta", "contributions");
+  });
 });
 
 function selectCode() {
+  pubsub.pub("bi:cta", "selected-code");
   if (window.getSelection && selectCodeOn) {
     var codeRange = document.createRange();
     codeRange.selectNodeContents(document.getElementById("markup"));
@@ -84,4 +93,80 @@ function editText(message, span) {
   var newString = prompt(message, $(span).text());
   if (newString != "" && newString != null) $(span).text(newString);
   selectCodeOn = false;
+  pubsub.pub("bi:control", "edit-value");
 }
+
+var pubsub = (function () {
+  var data = {};
+  return {
+    pub: function (label, extra) {
+      if (data[label]) {
+        data[label].map((fn) => fn(extra));
+      }
+    },
+    sub: function (label, callback) {
+      if (data[label] === undefined) {
+        data[label] = [];
+      }
+      data[label].push(callback);
+      return function () {
+        data[label].splice(data[label].indexOf(callback), 1);
+      };
+    },
+  };
+})();
+
+function runOnceByLabel(callback) {
+  var cache = [];
+  return (name) => {
+    if (cache.indexOf(name) >= 0) {
+      return;
+    }
+    cache.push(name);
+    callback(name);
+  };
+}
+
+pubsub.sub(
+  "bi:control",
+  runOnceByLabel(function (label) {
+    var alias = {
+      "html-radio-group": "ie-conditional-html",
+      "xua-radio-group": "meta-x-ua-compatible",
+      "vp-radio-group": "meta-viewport",
+      "commonmetas-radio-group": "meta-common",
+      "favicon-radio-group": "favicon",
+      "googlewebfonts-radio-group": "google-web-fonts",
+      "stylesheet-radio-group": "css-stylesheet",
+      "analytics-radio-group": "analytics",
+      "jquery-radio-group": "js-jquery",
+      "angular-radio-group": "js-angular",
+      "dojo-radio-group": "js-dojo",
+      "mootools-radio-group": "js-mootools",
+      "prototype-radio-group": "js-prototype",
+      "modernizr-radio-group": "js-modernizr",
+      "javascript-radio-group": "autorun-javascript",
+    };
+
+    label = alias[label] || label;
+
+    ga("send", {
+      hitType: "event",
+      eventCategory: "interaction",
+      eventAction: label,
+      eventLabel: label,
+    });
+  })
+);
+
+pubsub.sub(
+  "bi:cta",
+  runOnceByLabel(function (label) {
+    ga("send", {
+      hitType: "event",
+      eventCategory: "cta",
+      eventAction: "cta - " + label,
+      eventLabel: label,
+    });
+  })
+);
